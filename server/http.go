@@ -26,5 +26,10 @@ func WebHookDeploy(ctx echo.Context) error {
 		return ctx.JSON(http.StatusBadRequest, err.Error())
 	}
 	logger.Infof("%v", param)
+	event := ctx.Request().Header.Get("X-GitHub-Event")
+	if err := hook.Do(param.Repository.Name, "", event); err != nil {
+		return ctx.JSON(http.StatusInternalServerError, err.Error())
+	}
+
 	return ctx.JSON(http.StatusOK, "success")
 }

@@ -23,6 +23,8 @@ func (w *webhook) Verify(branch, event string) bool {
 			bt = true
 		}
 	}
+	// TODO TEST
+	bt = true
 	for _, e := range w.Event {
 		if e == event {
 			et = true
