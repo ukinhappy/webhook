@@ -1,15 +1,15 @@
 [http]
-addr = "127.0.0.1:15890"
+addr = "127.0.0.1:15890" # 服务
 [[projects]]
-name = "test-2"
-url = "github.com"
-branch = "master"
-shellpath = ""
+name = "test-2" # 仓库名
+branch = ["master"] # 接收指定分支的hook
+event = ["push"] # 接收指定事件的hook
+shellpath=""# 接收到通知后执行的shell文件
 
 
 
 [log]
-path = ""
+path = "" #日志路径
 debug = true
 maxsize = 10 #M
 maxage = 7
