@@ -1,0 +1,20 @@
+[http]
+addr = "127.0.0.1:15890"
+[[projects]]
+name = "test-2"
+url = "github.com"
+branch = "master"
+shell_path = ""
+
+[[projects]]
+name = "test-2"
+url = "github.com"
+branch = "develop"
+shell_path = ""
+
+[log]
+path = ""
+debug = true
+maxsize = 10 #M
+maxage = 7
+maxbackups = 10
