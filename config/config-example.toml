@@ -4,13 +4,9 @@ addr = "127.0.0.1:15890"
 name = "test-2"
 url = "github.com"
 branch = "master"
-shell_path = ""
+shellpath = ""
 
-[[projects]]
-name = "test-2"
-url = "github.com"
-branch = "develop"
-shell_path = ""
+
 
 [log]
 path = ""
