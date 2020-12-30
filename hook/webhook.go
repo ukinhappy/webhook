@@ -34,7 +34,8 @@ func (w *webhook) Verify(branch, event string) bool {
 }
 func (w *webhook) Do() error {
 	cmd := exec.Command("/bin/bash", "-c", w.ShellPath)
-	_, err := cmd.Output()
+	body, err := cmd.Output()
+	logger.Infof("bash do %s", body)
 	return err
 }
 
